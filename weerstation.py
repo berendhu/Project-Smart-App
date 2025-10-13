@@ -28,38 +28,34 @@ def weerstation():
     temperaturen = []
     for dag in range(1, 8): # maximaal 7 dagen
         #invoer temperatuur
-        temp_input = input(f"Wat is op de dag {dag} de temperatuur[c]: ")
-        if temp_input == "":
-            print("bye")
-            break
-
-        if not temp_input.replace('.', '', 1).lstrip('-').isdigit():
-            print("Ongeldige invoer, voer een getal in.")
-            continue
-        temp_c = float(temp_input)
+        try:
+            temp_input = input(f"Wat is op de dag {dag} de temperatuur[c]: ")
+            if temp_input == "":
+                print("programma gestopt door gebruiker.")
+                break
+            temp_c=float(temp_input)
 
         #invoer windsnelheid
-        wind_input = input(f"Wat is op dag {dag} de windsnelheid [m/s]: ")
-        if wind_input == "":
-            print("bye")
-            break
-        if not temp_input.replace('.', '', 1).isdigit():
-            print("Ongeldige invoer, voer een getal in.")
-            continue
-        windsnelheid = float(wind_input)
+            wind_input = input(f"Wat is op dag {dag} de windsnelheid [m/s]: ")
+            if wind_input == "":
+                print("programma gestopt door gebruiker.")
+                break
+            windsnelheid = float(wind_input)
 
         #invoer vochtigheid
-        vocht_input = input(f"Wat is op dag {dag} de vochtigheid[%]: ")
-        if vocht_input == "":
-            print("bye")
-            break
-        if not vocht_input.isdigit():
-            print("Ongeldige invoer, voer een geheel getal in. ")
-            continue
-        luchtvochtigheid = int(vocht_input)
+            vocht_input = input(f"Wat is op dag {dag} de vochtigheid[%]: ")
+            if vocht_input == "":
+                print("programma gestopt door gebruiker.")
+                break
+            luchtvochtigheid = int(vocht_input)
 
-        if luchtvochtigheid < 0 or luchtvochtigheid > 100:
-            print("Vochtigheid moet tusssen 0 en 100 liggen.")
+            if not 0 <= luchtvochtigheid <= 100:
+                print("Vochtigheid moet tusssen 0 en 100 liggen.")
+            continue
+        except ValueError:
+            print("Ongeldige invoer! Gebruik alleen getallen.")
+        except Exception as e:
+            print(f"Er is een onverwachte fout opgestreden: {e}")
             continue
 
         # --- verwerking ---
@@ -76,4 +72,7 @@ def weerstation():
     print ("Einde van het programma")
 
 if __name__ == "__main__":
-    weerstation()
+    try:
+        weerstation()
+    except Exception as e:
+        print(f"Kritieke fout: {e}")

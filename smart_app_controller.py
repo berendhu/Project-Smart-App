@@ -1,20 +1,32 @@
 def aantal_dagen(inputFile):
-    with open(inputFile, "r") as f:
-        regels = f.readlines()
-    return len(regels) - 1
+    try:
+        with open(inputFile, "r") as f:
+            regels = f.readlines()
+        return len(regels) - 1
+    except FileNotFoundError:
+        print(f"Bestand '{inputFile}' niet gevonden")
+        return 0
+    except Exception as e:
+        print(f"Onverwachte fout bij lezen van bestand: {e}")
 
 
 def auto_bereken(inputFile, outputFile):
-    with open(inputFile, "r") as f:
-        regels = f.readlines()[1:] #sla kolomnamen over
+    try:
+        with open(inputFile, "r") as f:
+            regels = f.readlines()[1:] #sla kolomnamen over
+    except FileNotFoundError:
+        print(f"bestand '{inputFile}'niet gevonden. ")
+        return
 
     uitvoer = []
 
     for regel in regels:
-        datum, personen, setpoint, buiten, neerslag = regel.strip().split()
-        personen, setpoint, buiten, neerslag = int(personen), float(setpoint), float(buiten), float(neerslag)
-
-
+        try:
+            datum, personen, setpoint, buiten, neerslag = regel.strip().split()
+            personen, setpoint, buiten, neerslag = int(personen), float(setpoint), float(buiten), float(neerslag)
+        except ValueError:
+            print(f"Ongeldige regel overgeslagen: {regel.strip()}")
+            continue
 
         #cv ketel logica
         verschil = setpoint - buiten
@@ -33,19 +45,24 @@ def auto_bereken(inputFile, outputFile):
 
         uitvoer.append(f"{datum}; {cv};{ventilatie};{bewatering}")
 
-    with open(outputFile, "w") as f:
-        for regel in uitvoer:
-            f.write(regel + "\n")
-
-    print(f"Actuatoren berekend en opgeslagen.")
-
+    try:
+        with open(outputFile, "w") as f:
+            for regel in uitvoer:
+                f.write(regel + "\n")
+                print("Actuatoren berekend en opgeslagen")
+    except Exception as e:
+                print(f"Fout bij schrijven naar bestand: {e}")
 
 def overwrite_settings(outputFile):
     datum = input("Voer een datum in (bijv. 08-10-2024): ")
     systeem = input("Kies een systeem (1=CV, 2=ventilatie, 3=bewatering): ")
 
-    with open(outputFile, "r") as f:
-        regels = f.readlines()
+    try:
+        with open(outputFile, "r") as f:
+            regels = f.readlines()
+    except FileNotFoundError:
+        print(f"Bestand '{outputFile}' niet gevonden")
+        return -1
 
     if not systeem.isdigit():
         print("Ongeldig systeem gekozen.")
@@ -90,13 +107,14 @@ def overwrite_settings(outputFile):
     if not gevonden:
         print("Datum niet gevonden.")
         return -1
-    bestand = open(outputFile, "w")
-    for regel in regels:
-        bestand.write(regel)
-    bestand.close()
 
-    print("Waarde succesvol overschreven.")
-    return 0
+    try:
+        with open(outputFile, "w") as bestand:
+            bestand.writelines(regels)
+            print("Waarde succesvol overschreven.")
+    except Exception as e:
+        print(f"Fout bij opslaan: {e}")
+        return -3
 
 
 def smart_app_controller():
@@ -130,4 +148,4 @@ def smart_app_controller():
 
 # Start het programma
 if __name__ == "__main__":
-    smart_app_controller( )
+    smart_app_controller()
