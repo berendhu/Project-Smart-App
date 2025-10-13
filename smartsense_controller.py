@@ -117,12 +117,12 @@ def overwrite_settings(outputFile):
         return -3
 
 
-def smart_app_controller():
+def smartsense_controller():
     inputFile = "input.txt"
     outputFile = "output.txt"
 
     while True:
-        print("\n=== SMART APP CONTROLLER ===")
+        print("\n=== SMARTSENSE CONTROLLER ===")
         print("1. Toon aantal dagen")
         print("2. Autobereken actuatoren")
         print("3. Overschrijf actuatorwaarde")
@@ -148,4 +148,4 @@ def smart_app_controller():
 
 # Start het programma
 if __name__ == "__main__":
-    smart_app_controller()
+    smartsense_controller()
