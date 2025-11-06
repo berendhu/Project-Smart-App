@@ -6,8 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="41fda731-dcd9-4b7d-b895-9e18ed8fd165" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/smartsense.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/smart_app_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/smartsense_controller.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output.txt" beforeDir="false" afterPath="$PROJECT_DIR$/output.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weerstation.py" beforeDir="false" afterPath="$PROJECT_DIR$/weerstation.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,27 +32,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Python.main.executor": "Run",
-    "Python.nauwkeurige_weersvoorspelling.executor": "Run",
-    "Python.smart_app_controller.executor": "Run",
-    "Python.smartsense.executor": "Run",
-    "Python.weerstation.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/beren/OneDrive - Stichting Hogeschool Utrecht/HBO-ICT/PROG/Project-smart-app",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "vcs.Git",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.nauwkeurige_weersvoorspelling.executor&quot;: &quot;Run&quot;,
+    &quot;Python.smart_app_controller.executor&quot;: &quot;Run&quot;,
+    &quot;Python.smartsense.executor&quot;: &quot;Run&quot;,
+    &quot;Python.weerstation.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/beren/OneDrive - Stichting Hogeschool Utrecht/HBO-ICT/PROG/Project-smart-app&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -71,7 +71,12 @@
       <workItem from="1760143160577" duration="2349000" />
       <workItem from="1760314832329" duration="745000" />
       <workItem from="1760323201545" duration="411000" />
-      <workItem from="1760323633920" duration="8932000" />
+      <workItem from="1760323633920" duration="9007000" />
+      <workItem from="1760338991308" duration="2801000" />
+      <workItem from="1761740940923" duration="6000" />
+      <workItem from="1761842323633" duration="412000" />
+      <workItem from="1761842753009" duration="615000" />
+      <workItem from="1762434375954" duration="2852000" />
     </task>
     <task id="LOCAL-00001" summary="smart app project">
       <option name="closed" value="true" />
@@ -97,7 +102,15 @@
       <option name="project" value="LOCAL" />
       <updated>1760330900395</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="laatste">
+      <option name="closed" value="true" />
+      <created>1760333960898</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1760333960898</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -118,13 +131,14 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="smart app project" />
     <MESSAGE value="laatste gedeelte" />
-    <option name="LAST_COMMIT_MESSAGE" value="laatste gedeelte" />
+    <MESSAGE value="laatste" />
+    <option name="LAST_COMMIT_MESSAGE" value="laatste" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Project_smart_app$nauwkeurige_weersvoorspelling.coverage" NAME="nauwkeurige_weersvoorspelling Coverage Results" MODIFIED="1760325261374" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Project_smart_app$weerstation.coverage" NAME="weerstation Coverage Results" MODIFIED="1760330780829" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Project_smart_app$weerstation.coverage" NAME="weerstation Coverage Results" MODIFIED="1762435327331" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Project_smart_app$main.coverage" NAME="main Coverage Results" MODIFIED="1760330809611" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Project_smart_app$smart_app_controller.coverage" NAME="smart_app_controller Coverage Results" MODIFIED="1760329999168" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Project_smart_app$smartsense.coverage" NAME="smartsense Coverage Results" MODIFIED="1760333919089" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Project_smart_app$smartsense.coverage" NAME="smartsense Coverage Results" MODIFIED="1762434414783" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

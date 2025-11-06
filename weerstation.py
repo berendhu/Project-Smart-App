@@ -51,7 +51,7 @@ def weerstation():
 
             if not 0 <= luchtvochtigheid <= 100:
                 print("Vochtigheid moet tusssen 0 en 100 liggen.")
-            continue
+                continue
         except ValueError:
             print("Ongeldige invoer! Gebruik alleen getallen.")
         except Exception as e:
